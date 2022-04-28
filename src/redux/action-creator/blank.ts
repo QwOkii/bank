@@ -22,3 +22,10 @@ export const editBlankAC =(id:number)=>{
         id
     }
 }
+
+export const sendMorgageAC =(morg:any) =>{
+    return{
+        type:ActionType.SEND_MORG,
+        morg
+    }
+}

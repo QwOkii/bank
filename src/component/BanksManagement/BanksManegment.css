@@ -25,3 +25,9 @@ body{
     text-align: left;
     padding: 0px 5px;
 }
+
+.blankedit{
+    font-size: 12px;
+    padding: 2px 0px;
+    margin: 0;
+}

@@ -12,16 +12,19 @@ export interface Blank{
 export enum ActionType{
     SET_BLANK="SET-BLANK",
     DELETE_BLANK="DELETE-BLANK",
-    EDIT_BLANK="EDIT-BLANK"
+    EDIT_BLANK="EDIT-BLANK",
+    SEND_MORG="SEND-MORG"
 }
 
 export interface StateType{
     blank:any[],
-    lenght:Boolean|null,
-    Sblank:{id:number,name:string,count:number,rate:number,term:number},
-     mode:boolean
+    Sblank:{id:number,name:string,count:number,rate:number,term:number,stavka:number,max:number},
+    morg:any,
+    M:number
+
+    
 }
-export type initialAction = SetBlnak | DeleteBlnak | EditBlnak
+export type initialAction = SetBlnak | DeleteBlnak | EditBlnak | SendMorg
 
 export interface SetBlnak{
     type:ActionType.SET_BLANK,
@@ -34,4 +37,9 @@ export interface DeleteBlnak{
 export interface EditBlnak{
     type:ActionType.EDIT_BLANK,
     id:number
+}
+
+export interface SendMorg{
+    type:ActionType.SEND_MORG,
+    morg:{ DownPaymen:number,Ilian:number,nameBank:string}
 }
